@@ -1,0 +1,15 @@
+*.py[cod]
+.idea/
+
+frontend/PartTimePlatform-frontend/
+frontend/PartTimePlatform-frontend/.git/
+frontend/PartTimePlatform-frontend/dist/
+frontend/PartTimePlatform-frontend/node_modules/
+
+logs/*
+!logs/.gitkeep
+app/others/uwsgi.log
+*.txt
+!requirement.txt
+*.xlsx
+nohup.out
