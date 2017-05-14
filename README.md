@@ -1,23 +1,5 @@
-\# 根据dockerfile 构建镜像
-```
-docker build -t debug .
-```
+# 同嘉-基于区块链的信用兼职平台
 
-\# build init image  对拉取好的镜像添加inittag
-```
-docker tag <image id> debug:init
-```
-
-\# 运行这个镜像, 注意至少开启 5000 8000 端口，5000是给python自带的服务器使用的，8000是给nginx使用的
-```
-docker run -v <你电脑上的该项目的根目录>:/app -p 5000:5000 -p 8000:8000 -p 8001:8001 -it --entrypoint=/bin/bash debug:init
-# 例如:
-docker run -v B:\projects\python\PyCharm\PartTimeJobPlatform:/app -p 5000:5000 -p 8000:8000 -p 8001:8001 -it --entrypoint=/bin/bash debug:init
-```
-
-\#进入到容器的镜像后，运行 startserver.sh 可以启动 nginx服务(占据8000端口)
->:/app# ./startserver.sh
-
-\# 或者可单独启动 python 服务器(占据5000端口)
->:/app# python manage.py runserver -h 0.0.0.0
-
+## 简介
+本作品基于hyperledger fabric搭建一个互利互惠的学生兼职中介联盟，改变当前信用成本高，虚假信息，信息不透明，效率低下的缺点，利用区块链的不可篡改性，透明性，自动执行的智能合约，响应政府的“互联网+”战略，迎合市场的需求，消除黑中介，黑公司，打造一个更好的学生兼职环境。
+本作品基于学生兼职中存在的诸多痛点，利用中介之间的竞争关系来达到用人公司、中介、学生三方之间的利益互惠，构建一个良性的信用生态。同时引入信用评级体系，学生、中介和用人公司三方互评，相互制约，使得不良中介、公司和学生很难在该生态中生存下去。使得学生可以获得更多更安全的招聘信息，公司能够更快地招聘到优质的人才。
